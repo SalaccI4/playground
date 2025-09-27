@@ -1,116 +1,99 @@
-//1. You have an array of user objects, each one has user.name.
-//Write the code that converts it into an array of names.
+//13. Write a palindrome function
 
-// let john = { name: "John", age: 25 };
-// let pete = { name: "Pete", age: 30 };
-// let mary = { name: "Mary", age: 28 };
+// function palindromes(word){
+//     let arr = []
+//     let reversed
+//     for (i = word.length; i > 0; i--){
+//         arr[word.length - i] = word.substring(i - 1, i)
+//     }
+//     reversed = arr.join("")
 
-// let users = [john, pete, mary];
-
-// let names = [john.name, pete.name, mary.name]
-
-// console.log(names); // John, Pete, Mary
-// console.log("hi world");
-
-
-
-//2. Write the code to create another array from it, of objects with id and fullName,
-//where fullName is generated from name and surname.
-
-// let john = { name: "John", surname: "Smith", id: 1 };
-// let pete = { name: "Pete", surname: "Hunt", id: 2 };
-// let mary = { name: "Mary", surname: "Key", id: 3 };
-
-// let users = [john, pete, mary];
-
-// let usersMapped = users.map((user) => ({
-//     fullName: `${user.name} ${user.surname}`,
-//     id: user.id
-// }))
-//     /*
-//     usersMapped = [
-//       { fullName: "John Smith", id: 1 },
-//       { fullName: "Pete Hunt", id: 2 },
-//       { fullName: "Mary Key", id: 3 }
-//     ]
-//     */
-
-// console.log(usersMapped[0].id) // 1
-// console.log(usersMapped[0].fullName) // John Smith
-
-
-
-//3. Write the function sortByAge(users) that gets an array of
-// //objects with the age property and sorts them by age.
-
-// let john = { name: "John", age: 25 };
-// let pete = { name: "Pete", age: 30 };
-// let mary = { name: "Mary", age: 28 };
-
-// let arr = [pete, john, mary];
-
-// function sortByAge(array){
-//     return array.sort((a, b) => a.age - b.age)
+//     if (word === reversed){
+//         return true
+//     }
+//     return false
 // }
 
-// sortByAge(arr);
 
-// now: [john, mary, pete]
-// console.log(arr[0].name); // John
-// console.log(arr[1].name); // Mary
-// console.log(arr[2].name); // Pete
+
+// console.log(palindromes('racecar')) // true
+// console.log(palindromes('tacos')) // false
 
 
 
-//4. Write the function getAverageAge(users) that gets an array of objects
-//with property age and returns the average age.
+//14. Create a function that returns a specific member of the Fibonacci sequence
 
-// let john = { name: "John", age: 25 };
-// let pete = { name: "Pete", age: 30 };
-// let mary = { name: "Mary", age: 29 };
-
-// let arr = [john, pete, mary];
-
-// function getAverageAge(array){
-//     return array.reduce((prev, next) =>
-//         prev + next.age, 0
-//     ) / array.length
+// function fibonacci(num){
+//     const series = [0, 1]
+//     for (i=1; i <= num; i++){
+//         series[i+1] = series[i] + series[i-1]
+//     }
+//     return series[num]
 // }
 
-// console.log(getAverageAge(arr)); // (25 + 30 + 29) / 3 = 28
+// console.log(fibonacci(4)); // returns the 4th member of the series: 3  (1, 1, 2, 3)
+// console.log(fibonacci(6)); // returns 8
 
 
 
-// //5. Create a function groupById(arr) that creates an object from it, with id as the key, 
-// //and array items as values.
+//15. Your job is to write a function that takes the array and returns an array of titles:
 
-// let users = [
-//     { id: 'john', name: "John Smith", age: 20 },
-//     { id: 'ann', name: "Ann Smith", age: 24 },
-//     { id: 'pete', name: "Pete Peterson", age: 31 },
-// ];
+// const books = [
+//     {
+//         title: 'Book',
+//         author: 'Name'
+//     },
+//     {
+//         title: 'Book2',
+//         author: 'Name2'
+//     }
+// ]
+
+// let getTheTitles = books.map((book) => 
+//     book.title
+// )
+
+// console.log(getTheTitles) // ['Book','Book2']
 
 
-// // function groupById(array){
-// //     return array.reduce((prev, next) => )
-// // }
 
-// function groupById(array) {
-//   return array.reduce((obj, value) => {
-//     obj[value.id] = value;
-//     return obj;
-//   }, {})
-// }
+//16. Given an array of objects representing people with a birth and death year, return the oldest person.
 
-// let usersById = groupById(users);
-// console.log(usersById)
+// const people = [
+//     {
+//         name: "Jack",
+//         birthYear: 1964,
+//         deathYear: 1994
+//     },
+//     {
+//         name: "Mary",
+//         birthYear: 1952,
+//         deathYear: 2011
+//     },
+//     {
+//         name: "Bertha",
+//         birthYear: 1984,
+//         deathYear: 2020
+//     },
+//     {
+//         name: "John",
+//         birthYear: 1977
+//     },
+//     {
+//         name: "Lexi",
+//         birthYear: 1999
+//     },
+// ]
+// const presentYear = new Date().getFullYear()
 
-// /*
-// // after the call we should have:
+// const oldest = people
+//     .filter((person) => {
+//         return person.deathYear == undefined
+//     })
+//     .reduce((prev, next) => {
+//         a = presentYear - prev.birthYear
+//         b = presentYear - next.birthYear
+//         return (a > b) ? prev : next
+//     })
 
-// usersById = {
-//   john: {id: 'john', name: "John Smith", age: 20},
-//   ann: {id: 'ann', name: "Ann Smith", age: 24},
-//   pete: {id: 'pete', name: "Pete Peterson", age: 31},
-// }
-// */
+// console.log(oldest)
