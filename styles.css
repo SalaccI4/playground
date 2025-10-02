@@ -56,7 +56,7 @@ tr:nth-of-type(even){
     color: white;
 } */
 
-h2 + p{
+/* h2 + p{
     color: red;
 }
 
@@ -66,4 +66,36 @@ h2 + p{
 
 .list>li{
     border: 1px, solid gray;
+} */
+
+body {
+    font: 1.2em / 1.5 sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+a {
+    display: block;
+    padding: 0.5em;
+    border: 5px solid grey;
+}
+
+a[title] {
+    border: 5px solid pink;
+}
+
+a[href*= "contact"] {
+    border: 5px solid orange;
+}
+
+a[href^="https"] {
+    border: 5px solid green;
 }
