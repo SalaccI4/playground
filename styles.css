@@ -2,7 +2,7 @@ body {
     font: 1.2em / 1.5 sans-serif;
 }
 
-h1{
+/* h1{
     color: blue;
 }
 
@@ -13,4 +13,20 @@ h2{
 
 span{
     font-size: 200%;
+} */
+
+#special{
+    background-color: yellow;
+}
+
+.alert{
+    border: 2px, solid, gray;
+}
+
+.alert.stop{
+    background-color: red;
+}
+
+.alert.go{
+    background-color: green;
 }
