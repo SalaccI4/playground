@@ -30,7 +30,8 @@ span{
 .alert.go{
     background-color: green;
 } */
-p:first-of-type{
+
+/* p:first-of-type{
     font-size: 150%;
 }
 
@@ -53,4 +54,16 @@ a:hover{
 tr:nth-of-type(even){
     background-color: #333333;
     color: white;
+} */
+
+h2 + p{
+    color: red;
+}
+
+.list{
+    list-style-type: none;
+}
+
+.list>li{
+    border: 1px, solid gray;
 }
