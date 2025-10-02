@@ -14,8 +14,6 @@
 //     return false
 // }
 
-
-
 // console.log(palindromes('racecar')) // true
 // console.log(palindromes('tacos')) // false
 
