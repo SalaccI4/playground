@@ -14,7 +14,7 @@ h2{
 span{
     font-size: 200%;
 } */
-
+/* 
 #special{
     background-color: yellow;
 }
@@ -29,4 +29,28 @@ span{
 
 .alert.go{
     background-color: green;
+} */
+p:first-of-type{
+    font-size: 150%;
+}
+
+p:first-of-type::first-line{
+    color: red;
+}
+
+a:link{
+    color:orange;
+}
+
+a:visited{
+    color:green;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+tr:nth-of-type(even){
+    background-color: #333333;
+    color: white;
 }
