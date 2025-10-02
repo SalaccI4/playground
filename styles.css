@@ -1,50 +1,16 @@
-/* General setup */
-
-@font-face {
-    font-family: "Quicksand";
-    src: url(fonts/Quicksand-Regular.woff), 
-    url(fonts/Quicksand-Regular.woff2);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "SourceSansPro";
-    src: url(fonts/SourceSansPro-Regular.woff), 
-    url(fonts/SourceSansPro-Regular.woff2);
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-html {
-    font-size: 10px;
-    margin: 0;
-    font-family: sans-serif;
-}
-
 body {
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
+    font: 1.2em / 1.5 sans-serif;
 }
 
-/* Typography */
-
-h1 {
-    font-size: 3.2rem;
-    font-family: "Quicksand", serif;
+h1{
+    color: blue;
 }
 
-h2 {
-    font-size: 2.4rem;
-    font-family: "Quicksand", serif;
+h2{
+    background-color: blue;
+    color: white;
 }
 
-p {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    word-spacing: 0.6rem;
-    font-family: "SourceSansPro", serif;
+span{
+    font-size: 200%;
 }
