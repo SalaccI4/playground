@@ -1,101 +1,64 @@
-body {
-    font: 1.2em / 1.5 sans-serif;
-}
-
-/* h1{
-    color: blue;
-}
-
-h2{
-    background-color: blue;
-    color: white;
-}
-
-span{
-    font-size: 200%;
-} */
-/* 
-#special{
-    background-color: yellow;
-}
-
-.alert{
-    border: 2px, solid, gray;
-}
-
-.alert.stop{
-    background-color: red;
-}
-
-.alert.go{
-    background-color: green;
-} */
-
-/* p:first-of-type{
-    font-size: 150%;
-}
-
-p:first-of-type::first-line{
-    color: red;
-}
-
-a:link{
-    color:orange;
-}
-
-a:visited{
-    color:green;
-}
-
-a:hover{
-    text-decoration: none;
-}
-
-tr:nth-of-type(even){
-    background-color: #333333;
-    color: white;
-} */
-
-/* h2 + p{
-    color: red;
-}
-
-.list{
-    list-style-type: none;
-}
-
-.list>li{
-    border: 1px, solid gray;
-} */
-
-body {
-    font: 1.2em / 1.5 sans-serif;
-}
-
-ul {
-    list-style: none;
+body,
+html {
+    height: 100%;
     margin: 0;
-    padding: 0;
 }
 
-li {
-    margin-bottom: 0.5em;
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header header header header header header"
+        "sidebar sidebar sidebar nav nav nav nav nav"
+        "sidebar sidebar sidebar article article article article article"
+        "sidebar sidebar sidebar article article article article article"
+        "sidebar sidebar sidebar article article article article article"
+        "sidebar sidebar sidebar article article article article article"
+        "footer footer footer footer footer footer footer footer";
+
+    gap: 10px;
+    text-align: center;
+    height: 100%;
+    padding: 16px;
+    box-sizing: border-box;
 }
 
-a {
-    display: block;
-    padding: 0.5em;
-    border: 5px solid grey;
+.container div {
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
 }
 
-a[title] {
-    border: 5px solid pink;
+.header {
+    background-color: #006157;
+    grid-area: header;
 }
 
-a[href*= "contact"] {
-    border: 5px solid orange;
+.sidebar {
+    background-color: #005B94;
+    grid-area: sidebar;
 }
 
-a[href^="https"] {
-    border: 5px solid green;
+.nav {
+    background-color: #642cde;
+    grid-area: nav;
+}
+
+.article {
+    background-color: #7E1DC3;
+    grid-area: article;
+}
+
+.footer {
+    background-color: #393f4d;
+    grid-area: footer;
+}
+
+.article p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
 }
