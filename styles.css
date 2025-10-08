@@ -6,9 +6,9 @@ html {
 
 .container {
     display: grid;
-    grid-template-columns: 300px 900px;
-    grid-template-rows: 100px 100px 500px 100px;
-    gap: 10px;
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    gap: 15px;
     text-align: center;
     height: 100%;
     padding: 16px;
